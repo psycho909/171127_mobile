@@ -188,13 +188,14 @@ body {
     height: 100%;
     line-height: 3.4rem; }
   .last-open-box .last-ball span {
-    width: 29px;
-    height: 29px;
+    width: 27px;
+    height: 27px;
     display: inline-block;
     text-align: center;
-    line-height: 29px;
+    line-height: 27px;
     color: #fff;
-    background-image: url("../images/ball.png"); }
+    background-image: url("../images/ball.png");
+    background-size: cover; }
   .last-open-box .last-key span {
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: inline-block;
