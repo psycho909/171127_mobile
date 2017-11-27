@@ -40,7 +40,7 @@ export default {
         Nowlottery,
         Lotter,
         Gamelist,
-        Notice,
+        Playbox,
         Notice
     },
     mixins:[autoheight],
