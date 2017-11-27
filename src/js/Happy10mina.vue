@@ -57,26 +57,6 @@ export default {
     mounted:function(){
         console.log('mounted')
     },
-    updated() {
-        console.log('updated')
-        this.$nextTick(function(){
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView:3,
-                spaceBetween: 2
-            });
-            var navHeight=$('.navbar').outerHeight();
-            var lastHeight=$('.last-open-box').outerHeight();
-            var nowHeight=$('.now-open-box').outerHeight();
-            var playHeight=$('.play-box').outerHeight()||0;
-            var swiperHeight=$('.swiper-wrapper').outerHeight()||0;
-            var saveHeight=navHeight+lastHeight+nowHeight+playHeight+swiperHeight;
-            var wHeight=$(window).height();
-            $('.mainbody-box').height(wHeight-saveHeight+'px')
-            $('.menu-group').height(wHeight+'px')
-            $('.game-list-menu').height(wHeight-saveHeight+'px')
-            console.log('updated'+wHeight+' : '+saveHeight)
-        })
-    },
     methods:{
         getGameName(name){
             this.get_name=name;
@@ -333,8 +313,8 @@ export default {
                 {title:false,name:14,num:70,col:'col-4',ball:true},
                 {title:false,name:15,num:70,col:'col-4',ball:true},
                 {title:false,name:16,num:70,col:'col-4',ball:true},
-                {title:false,name:17,num:70,col:'col-4',ball:true},
-                {title:false,name:18,num:70,col:'col-4',ball:true},
+                {title:false,name:17,num:70,col:'col-6',ball:true},
+                {title:false,name:18,num:70,col:'col-6',ball:true},
                 {title:false,name:19,num:70,col:'col-6',ball:true},
                 {title:false,name:20,num:70,col:'col-6',ball:true},
                 {title:false,name:'大',num:70,col:'col-6',ball:false},
@@ -359,8 +339,8 @@ export default {
                 {title:false,name:14,num:70,col:'col-4',ball:true},
                 {title:false,name:15,num:70,col:'col-4',ball:true},
                 {title:false,name:16,num:70,col:'col-4',ball:true},
-                {title:false,name:17,num:70,col:'col-4',ball:true},
-                {title:false,name:18,num:70,col:'col-4',ball:true},
+                {title:false,name:17,num:70,col:'col-6',ball:true},
+                {title:false,name:18,num:70,col:'col-6',ball:true},
                 {title:false,name:19,num:70,col:'col-6',ball:true},
                 {title:false,name:20,num:70,col:'col-6',ball:true},
                 {title:false,name:'大',num:70,col:'col-6',ball:false},
@@ -385,8 +365,8 @@ export default {
                 {title:false,name:14,num:70,col:'col-4',ball:true},
                 {title:false,name:15,num:70,col:'col-4',ball:true},
                 {title:false,name:16,num:70,col:'col-4',ball:true},
-                {title:false,name:17,num:70,col:'col-4',ball:true},
-                {title:false,name:18,num:70,col:'col-4',ball:true},
+                {title:false,name:17,num:70,col:'col-6',ball:true},
+                {title:false,name:18,num:70,col:'col-6',ball:true},
                 {title:false,name:19,num:70,col:'col-6',ball:true},
                 {title:false,name:20,num:70,col:'col-6',ball:true},
                 {title:false,name:'大',num:70,col:'col-6',ball:false},
@@ -411,8 +391,8 @@ export default {
                 {title:false,name:14,num:70,col:'col-4',ball:true},
                 {title:false,name:15,num:70,col:'col-4',ball:true},
                 {title:false,name:16,num:70,col:'col-4',ball:true},
-                {title:false,name:17,num:70,col:'col-4',ball:true},
-                {title:false,name:18,num:70,col:'col-4',ball:true},
+                {title:false,name:17,num:70,col:'col-6',ball:true},
+                {title:false,name:18,num:70,col:'col-6',ball:true},
                 {title:false,name:19,num:70,col:'col-6',ball:true},
                 {title:false,name:20,num:70,col:'col-6',ball:true},
                 {title:false,name:'大',num:70,col:'col-6',ball:false},
@@ -437,8 +417,8 @@ export default {
                 {title:false,name:14,num:70,col:'col-4',ball:true},
                 {title:false,name:15,num:70,col:'col-4',ball:true},
                 {title:false,name:16,num:70,col:'col-4',ball:true},
-                {title:false,name:17,num:70,col:'col-4',ball:true},
-                {title:false,name:18,num:70,col:'col-4',ball:true},
+                {title:false,name:17,num:70,col:'col-6',ball:true},
+                {title:false,name:18,num:70,col:'col-6',ball:true},
                 {title:false,name:19,num:70,col:'col-6',ball:true},
                 {title:false,name:20,num:70,col:'col-6',ball:true},
                 {title:false,name:'大',num:70,col:'col-6',ball:false},

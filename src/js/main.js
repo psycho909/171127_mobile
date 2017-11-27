@@ -56,16 +56,16 @@ export default new Vue({
     },
     created(){
         this.$nextTick(function(){
-            var navHeight=$('.navbar').outerHeight();
-            var lastHeight=$('.last-open-box').outerHeight();
-            var nowHeight=$('.now-open-box').outerHeight();
-            var playHeight=$('.play-box').outerHeight()||0;
-            var swiperHeight=$('.swiper-wrapper').outerHeight()||0;
+            var navHeight=document.querySelector('.navbar')?document.querySelector('.navbar').offsetHeight:0;
+            var lastHeight=document.querySelector('.last-open-box')?document.querySelector('.last-open-box').offsetHeight:0;
+            var nowHeight=document.querySelector('.now-open-box')?document.querySelector('.now-open-box').offsetHeight:0;
+            var playHeight=document.querySelector('.play-box')?document.querySelector('.play-box').offsetHeight:0;
+            var swiperHeight=document.querySelector('.swiper-wrapper')?document.querySelector('.swiper-wrapper').offsetHeight:0;
             var saveHeight=navHeight+lastHeight+nowHeight+playHeight+swiperHeight;
-            var wHeight=$(window).height();
-            $('.mainbody-box').height(wHeight-saveHeight+'px')
-            $('.menu-group').height(wHeight+'px')
-            $('.game-list-menu').height(wHeight-saveHeight+'px')
+            var wHeight=document.documentElement.clientHeight;
+            document.querySelector('.mainbody-box').style.height=wHeight-saveHeight+'px';
+            document.querySelector('.menu-group').style.height=wHeight+'px';
+            document.querySelector('.game-list-menu').style.height=wHeight-saveHeight+'px';
             console.log('created')
         })
     },
@@ -102,15 +102,15 @@ export default new Vue({
         }
     },
 })
-$(function(){
-    var navHeight=$('.navbar').outerHeight();
-    var lastHeight=$('.last-open-box').outerHeight();
-    var nowHeight=$('.now-open-box').outerHeight();
-    var playHeight=$('.play-box').outerHeight()||0;
-    var swiperHeight=$('.swiper-wrapper').outerHeight()||0;
+window.onload=function(){
+    var navHeight=document.querySelector('.navbar')?document.querySelector('.navbar').offsetHeight:0;
+    var lastHeight=document.querySelector('.last-open-box')?document.querySelector('.last-open-box').offsetHeight:0;
+    var nowHeight=document.querySelector('.now-open-box')?document.querySelector('.now-open-box').offsetHeight:0;
+    var playHeight=document.querySelector('.play-box')?document.querySelector('.play-box').offsetHeight:0;
+    var swiperHeight=document.querySelector('.swiper-wrapper')?document.querySelector('.swiper-wrapper').offsetHeight:0;
     var saveHeight=navHeight+lastHeight+nowHeight+playHeight+swiperHeight;
-    var wHeight=$(window).height();
-    $('.mainbody-box').height(wHeight-saveHeight+'px')
-    $('.menu-group').height(wHeight+'px')
-    $('.game-list-menu').height(wHeight-saveHeight+'px')
-})
+    var wHeight=document.documentElement.clientHeight;
+    document.querySelector('.mainbody-box').style.height=wHeight-saveHeight+'px';
+    document.querySelector('.menu-group').style.height=wHeight+'px';
+    document.querySelector('.game-list-menu').style.height=wHeight-saveHeight+'px';
+}
