@@ -10,6 +10,7 @@
             </div>
         </div>
         <Playbox></Playbox>
+        <Notice></Notice>
     </div>
 </template>
 <script>
@@ -19,6 +20,7 @@ import Nowlottery from './NowLottery.vue'
 import Lotter from './Lotter.vue'
 import Gamelist from './Gamelist.vue'
 import Playbox from './Playbox.vue'
+import Notice from './Notice.vue'
 import {autoheight} from './mixins/autoheight';
 
 export default {
@@ -28,7 +30,8 @@ export default {
         Nowlottery,
         Lotter,
         Gamelist,
-        Playbox
+        Playbox,
+        Notice
     },
     mixins:[autoheight],
     props:['name'],

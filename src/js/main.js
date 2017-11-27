@@ -12,6 +12,7 @@ import Elevenlist from './ElevenList.vue'
 import Order3 from './Order3.vue'
 import Fu3d from './Fu3d.vue'
 import Shanghai from './Shanghai.vue'
+import Notice from './Notice.vue'
 
 Vue.use(VueRouter)
 
@@ -80,7 +81,8 @@ export default new Vue({
         Elevenlist,
         Order3,
         Fu3d,
-        Shanghai
+        Shanghai,
+        Notice
     },
     methods:{
         menuListSelect(event){
