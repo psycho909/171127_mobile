@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="last-number mr-2">20171116052期</div>
                         <div class="ball-box d-flex flex-column">
-                            <div class="last-ball">
+                            <div class="last-ball mb-1">
                                 <span>4</span>
                                 <span>2</span>
                                 <span>6</span>

@@ -164,7 +164,13 @@ body{
 	}
 	.last-ball{
 		span{
-			@include ball(1.8rem);
+			width: 29px;
+			height: 29px;
+			display: inline-block;
+			text-align: center;
+			line-height: 29px;
+			color:#fff;
+			background-image: url('../images/ball.png')
 		}
 	}
 	.last-key{
