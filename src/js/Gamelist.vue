@@ -20,7 +20,7 @@ export default {
         }
     },
     methods:{
-        gameListSelect(){
+        gameListSelect(event){
             $(event.currentTarget).addClass('active').siblings().removeClass('active')
             this.name=event.currentTarget.dataset.game;
             this.$emit('gameListSelect',this.name)

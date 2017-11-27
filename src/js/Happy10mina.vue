@@ -9,7 +9,7 @@
                 <Lotter :game="happy10_a" v-if="get_name == 'happy10_a'"></Lotter>
                 <div class="col swiper-container" v-if="get_name == 'happy10_b'">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" :class="{active:list.active}" v-for="(list,index) in happy10_con_menu" @click="swiperToggle" :data-game="list.game_name">{{list.name}}</div>
+                        <div class="swiper-slide" :class="{active:list.active}" v-for="(list,index) in happy10_con_menu" @click="swiperToggle($event)" :data-game="list.game_name">{{list.name}}</div>
                     </div>
                     <Lotter :game="happy10_balla" v-if="game_name == 'happy10_balla'"></Lotter>
                     <Lotter :game="happy10_ballb" v-if="game_name == 'happy10_ballb'"></Lotter>
@@ -78,7 +78,7 @@ export default {
         getGameName(name){
             this.get_name=name;
         },
-        swiperToggle(){
+        swiperToggle(event){
             this.game_name=event.currentTarget.dataset.game;
             $(event.currentTarget).addClass('active').siblings().removeClass('active')
         }

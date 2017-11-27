@@ -97,7 +97,8 @@ body {
     .more-game-list.show .menu-group.show {
       -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
-      transform: translateX(0%); }
+      transform: translateX(0%);
+      box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.8); }
   .more-game-list .menu-group {
     width: 200px;
     height: 100%;
@@ -109,7 +110,7 @@ body {
     -ms-transform: translateX(-100%);
     transform: translateX(-100%); }
     .more-game-list .menu-group.active {
-      box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.4); }
+      box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.8); }
     .more-game-list .menu-group .menu-list {
       border: 1px solid rgba(68, 68, 68, 0.5);
       border-right: 0px solid transparent;

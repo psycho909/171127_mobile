@@ -8,7 +8,7 @@
                 <Gamelist :gameName="list" @gameListSelect="getGameName"></Gamelist>
                 <div class="col swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" :class="{active:list.active}" v-for="(list,index) in order3_menu" @click="swiperToggle" :data-game="list.game_name">{{list.name}}</div>
+                        <div class="swiper-slide" :class="{active:list.active}" v-for="(list,index) in order3_menu" @click="swiperToggle($event)" :data-game="list.game_name">{{list.name}}</div>
                     </div>
 
                     <Lotter :game="order3_balla" v-if="game_name == 'order3_balla'"></Lotter>
@@ -65,7 +65,7 @@ export default {
         getGameName(name){
             this.get_name=name;
         },
-        swiperToggle(){
+        swiperToggle(event){
             this.game_name=event.currentTarget.dataset.game;
             $(event.currentTarget).addClass('active').siblings().removeClass('active')
         },

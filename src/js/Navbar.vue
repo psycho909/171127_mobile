@@ -36,7 +36,7 @@ export default {
 			document.querySelector('.more-game-list').classList.add('show')
 			setTimeout(function(){
 				document.querySelector('.menu-group').classList.add('show')
-			},100)
+			},300)
 		}
 	}
 }

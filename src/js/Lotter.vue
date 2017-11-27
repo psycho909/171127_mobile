@@ -6,7 +6,7 @@
                     <span class="bet-content mr-1">{{bets.name}}</span>
                     <span class="bet-item" slot="bets-number" v-if="typeof bets.num == 'number'">{{bets.num}}</span>
                 </div>
-                <div class="bet" :class='[bets.col,{active:isActive}]' @click="bet_active()" v-else>
+                <div class="bet" :class='[bets.col,{active:isActive}]' @click="bet_active($event)" v-else>
                     <span class="bet-content" :class="[{ball:bets.ball},bets.circle?bets.circle+(i+1):'',bets.circle?bets.circle:'']">{{bets.name}}</span>
                     <span class="bet-item" v-if="typeof bets.num == 'number'">{{bets.num}}</span>
                 </div>
@@ -24,7 +24,7 @@
             }
         },
         methods:{
-            bet_active:function(){
+            bet_active:function(event){
                 event.currentTarget.classList.toggle('active')
                 var _self=this;
                 this.$emit('bet_active',_self.isActive)

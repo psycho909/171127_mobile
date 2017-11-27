@@ -84,13 +84,12 @@ export default new Vue({
     },
     methods:{
         menuListSelect(event){
-            console.log('router')
             var _event=event
             this.game_name=event.currentTarget.dataset.menu
             event.currentTarget.parentNode.classList.remove('show')
             setTimeout(function(){
                 _event.target.parentNode.parentNode.classList.remove('show')
-            },300)
+            },400)
             console.log('router')
         }
     },
