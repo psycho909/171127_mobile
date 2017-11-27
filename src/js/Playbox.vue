@@ -6,7 +6,7 @@
                     <div class="d-flex flex-column mr-5">
                         <div class="select-num text-white mb-2">已选中
                             <span class="bet-num">0</span> 注</div>
-                        <input type="text" class="form-control" placeholder="输入金额">
+                        <input type="number" class="form-control" placeholder="输入金额">
                     </div>
                     <button class="play-btn btn btn-play mr-3">下注</button>
                     <button class="play-btn btn btn-reset">重置</button>
