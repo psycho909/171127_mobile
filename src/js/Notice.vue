@@ -15,7 +15,6 @@
 export default {
     created(){
         this.$nextTick(function(){
-            console.log('cancel')
             $('.btn-cancel').on('click',function(){
                 $('.notice-modal-box').addClass('active')
                 $('.notice-modal').animate({

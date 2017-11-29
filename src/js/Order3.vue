@@ -69,8 +69,14 @@ export default {
             this.get_name=name;
         },
         swiperToggle(event){
+            var swiperDiv=document.querySelectorAll(".swiper-slide")
             this.game_name=event.currentTarget.dataset.game;
-            $(event.currentTarget).addClass('active').siblings().removeClass('active')
+            for(var i=0;i<swiperDiv.length;i++){
+                if(swiperDiv[i].classList.contains('active')){
+                    swiperDiv[i].classList.remove('active')
+                }
+            }
+            event.currentTarget.classList.add('active')
         },
     },
     data(){

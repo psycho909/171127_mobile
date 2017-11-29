@@ -21,7 +21,14 @@ export default {
     },
     methods:{
         gameListSelect(event){
-            $(event.currentTarget).addClass('active').siblings().removeClass('active')
+            var gameList=document.querySelectorAll(".game-list")
+            this.game_name=event.currentTarget.dataset.game;
+            for(var i=0;i<gameList.length;i++){
+                if(gameList[i].classList.contains('active')){
+                    gameList[i].classList.remove('active')
+                }
+            }
+            event.currentTarget.classList.add('active')
             this.name=event.currentTarget.dataset.game;
             this.$emit('gameListSelect',this.name)
         }
