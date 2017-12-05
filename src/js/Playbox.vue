@@ -1,5 +1,6 @@
 <template>
     <section class="play-box fixed-bottom">
+        <!-- 下注块 -->
         <div class="container-fluid">
             <div class="row py-2">
                 <div class="col-12 d-flex">
@@ -8,7 +9,7 @@
                             <span class="bet-num">0</span> 注</div>
                         <input type="number" class="form-control" placeholder="输入金额">
                     </div>
-                    <button class="play-btn btn btn-play mr-3">下注</button>
+                    <button id="beishu" class="play-btn btn btn-play mr-3">下注</button>
                     <button class="play-btn btn btn-reset">重置</button>
                 </div>
             </div>
